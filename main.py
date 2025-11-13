@@ -10,11 +10,11 @@ PASSWORD = os.getenv("IG_PASSWORD")
 
 app = Flask(__name__)
 cl = Client()
-cl.login(USERNAME, PASSWORD)
 
 @app.route("/")
 def home():
-    return "Bot running!"
+    return "Insta bot running!"
 
 if __name__ == "__main__":
-    app.run()
+    cl.login(USERNAME, PASSWORD)
+    app.run(host="0.0.0.0", port=5000)
