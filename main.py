@@ -1,6 +1,8 @@
+import os
+os.environ["DISABLE_PIL"] = "1"
+
 from instagrapi import Client
 from time import sleep
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
